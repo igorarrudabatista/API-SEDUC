@@ -1,0 +1,80 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "SEDUC - MT | API",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/seduc/professor": {
+            "get": {
+                "tags": [
+                    "Professor"
+                ],
+                "summary": "Get Tabela Professor",
+                "description": "Fetches all the Asset records",
+                "operationId": "f984f12798b07888c788d87610b92c47",
+                "parameters": [
+                    {
+                        "name": "ESCOLA_ID",
+                        "in": "query",
+                        "description": "ID da Escola",
+                        "required": false,
+                        "style": "form",
+                        "example": "10766"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "422": {
+                        "description": "Missing Data"
+                    },
+                    "401": {
+                        "description": "fail"
+                    },
+                    "404": {
+                        "description": "fail"
+                    }
+                }
+            }
+        },
+        "/api/seduc/alunos": {
+            "get": {
+                "tags": [
+                    "Alunos"
+                ],
+                "summary": "Get Tabela Alunos",
+                "description": "Fetches all the Asset records",
+                "operationId": "e8da073d34db13db6909108ae5432639",
+                "parameters": [
+                    {
+                        "name": "GedAluCod",
+                        "in": "query",
+                        "description": "ID da Escola",
+                        "required": false,
+                        "style": "form",
+                        "example": "1158331"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "422": {
+                        "description": "Missing Data"
+                    },
+                    "401": {
+                        "description": "fail"
+                    },
+                    "404": {
+                        "description": "fail"
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
